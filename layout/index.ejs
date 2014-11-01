@@ -2,10 +2,10 @@
   var promotions = [];
   if (theme.promotions === null) {
     promotions = []
-  }else if (typeof theme.promotions == "string"&&theme.promotions.constructor==String){
+  }else if (typeof theme.stickies== "string"&&theme.stickies.constructor==String){
     promotions.push(theme.promotions);
   }else{
-    promotions = theme.promotions;
+    promotions = theme.stickies;
   }
   var promotions = promotions.map(function (promo) {
     return "_posts/"+promo+".md";
