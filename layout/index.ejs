@@ -1,5 +1,32 @@
+<%
+  var promotions = [];
+  if (theme.promotions === null) {
+    promotions = []
+  }else if (typeof theme.promotions == "string"&&theme.promotions.constructor==String){
+    promotions.push(theme.promotions);
+  }else{
+    promotions = theme.promotions;
+  }
+  var promotions = promotions.map(function (promo) {
+    return "_posts/"+promo+".md";
+	});
+  var promoposts = page.posts.filter(function(po){
+    return promotions.some(function(po1){
+	  return po1 == po.source;
+      })
+	});
+  var normalposts= page.posts.filter(function(po){
+    return !promotions.some(function(po1){
+	  return po1 == po.source;
+      })
+	});
+%>
+
 <div id="main">
-<% page.posts.each(function(item){ %>
+<% promoposts.each(function(item){ %>
+  <%- partial('_partial/sticky', {item: item, index: true,desc: true}) %>
+<% }); %>
+<% normalposts.each(function(item){ %>
   <%- partial('_partial/article', {item: item, index: true,desc: true}) %>
 <% }); %>
 <% if (page.total > 1){ %>

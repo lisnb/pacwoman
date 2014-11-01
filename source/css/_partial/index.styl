@@ -24,7 +24,7 @@
     a
       display block
       border-left 0.5em solid color-gray
-      transition border-left .45s
+      transition border .45s
       padding 0.5em
       @media mini
         padding 1em
@@ -40,6 +40,23 @@
         display block
         margin 0.5em 0
         font-size 0.5em
+
+.promotion
+    border-top 0.5em solid color-section
+    border-bottom 0.5em solid color-section
+    transition border .5s
+    margin-bottom 0.25em
+    &:hover
+      border-top 0.5em solid color-theme
+      border-bottom 0.5em solid color-theme
+      .promotion-text
+        margin-right 2em
+
+.promotion-text
+  color color-theme
+  margin-right 0.8em
+  transition margin-right 0.5s
+
 
 .moveMain
   margin-left 10% !important
