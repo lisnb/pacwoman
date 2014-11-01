@@ -16,7 +16,7 @@ to add some sticky posts, just add your markdown file name to the "stickies" in 
 
 for example
 
-*_config.yaml*
+*_config.yml*
 
     ...
 	stickies:

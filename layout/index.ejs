@@ -1,9 +1,9 @@
 <%
   var promotions = [];
-  if (theme.promotions === null) {
+  if (theme.stickies=== null) {
     promotions = []
   }else if (typeof theme.stickies== "string"&&theme.stickies.constructor==String){
-    promotions.push(theme.promotions);
+    promotions.push(theme.stickes);
   }else{
     promotions = theme.stickies;
   }
