@@ -107,7 +107,8 @@ article
     ul li>code,ol li>code,p code,strong code,em code
       font-family font-mono
       background color-code
-      color darken(color-font,10%)
+      //color darken(color-font,10%)
+      color highlightcode-color 
       border 1px solid darken(color-code,10%)
       padding 0 5px
       margin 0 2px
@@ -120,6 +121,8 @@ article
       margin 0.7em 0
       @media tablet
         margin 1.2em 0
+      code
+        color highlightcode-color
     img,video,figure img
       max-width 100%
       display block
