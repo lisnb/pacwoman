@@ -5,6 +5,8 @@ A flat and responsive theme for [Hexo](http://zespia.tw/hexo/), based on [Pacman
 
 support **Sticky** feature
 
+You can checkout the demo here: [lisnb's garage](http://lixipeng.me)~
+
 
 ##Usage
 ---
